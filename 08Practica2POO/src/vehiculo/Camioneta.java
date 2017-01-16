@@ -1,6 +1,7 @@
 package vehiculo;
 
-import vehiculo.Vehiculo;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -10,12 +11,7 @@ public class Camioneta extends Vehiculo {
 
     public int numPuertas;
     public String color;
-
-    public Camioneta(String marca, String modelo, Double costo, int numPuertas, String color) {
-        super(marca, modelo, costo);
-        this.numPuertas = numPuertas;
-        this.color = color;
-    }
+    private static ArrayList<Camioneta> camioneta = new ArrayList();
 
     public int getNumPuertas() {
         return numPuertas;
@@ -33,4 +29,46 @@ public class Camioneta extends Vehiculo {
         this.color = color;
     }
 
+    public Camioneta(String marca, String modelo, Double costo, int numPuertas, String color) {
+        super(marca, modelo, costo);
+        this.numPuertas = numPuertas;
+        this.color = color;
+    }
+
+    public Camioneta() {
+    }
+
+    @Override
+    public void Registrar() {
+        Scanner lectorString = new Scanner(System.in);
+        Scanner lectorDouble = new Scanner(System.in);
+        Scanner lectorInt = new Scanner(System.in);
+        Camioneta c = new Camioneta();
+        System.out.println("Ingresa marca: ");
+        c.setMarca(lectorString.nextLine());
+        System.out.println("Ingresa modelo: ");
+        c.setModelo(lectorString.nextLine());
+        System.out.println("Ingresa costo:");
+        c.setCosto(lectorDouble.nextDouble());
+        System.out.println("Ingresa num puertas");
+        c.setNumPuertas(lectorInt.nextInt());
+        System.out.println("Ingresa color: ");
+        c.setColor(lectorString.nextLine());
+
+        camioneta.add(new Camioneta(c.getMarca(),c.getModelo(),c.getCosto(),c.getNumPuertas(),c.getColor()));
+    }
+
+    @Override
+    public void consultarTodo() {
+        System.out.println("==============CAMIONETAS===============");
+        for(int valor = 0; valor < camioneta.size(); valor++) {
+            System.out.println(
+                    "Marca: " + camioneta.get(valor).getMarca() + " "
+                    + "Modelo: " + camioneta.get(valor).getModelo() + " "
+                    + "Costo: " + camioneta.get(valor).getCosto() + " "
+                    + "Num. Puertas: " + camioneta.get(valor).numPuertas + " "
+                    + "Color: " + camioneta.get(valor).color);
+        }
+        System.out.println("=======================================");
+    }
 }

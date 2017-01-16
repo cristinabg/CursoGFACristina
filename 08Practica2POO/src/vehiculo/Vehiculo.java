@@ -1,5 +1,7 @@
 package vehiculo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ac.barrios
@@ -11,7 +13,6 @@ public abstract class Vehiculo {
     private String modelo;
     private Double costo;
     
-    private Vehiculo [] vehiculos;
     
     public Vehiculo(String marca, String modelo, Double costo) {
         this.marca = marca;
@@ -19,7 +20,6 @@ public abstract class Vehiculo {
         this.costo = costo;
     }
     public Vehiculo(){
-        
     }
     public void setCosto(Double costo) {
         this.costo = costo;
@@ -45,7 +45,7 @@ public abstract class Vehiculo {
         return costo;
     }
     
-    public abstract void Registrar(Vehiculo vehiculo);
+    public abstract void Registrar();
 
-    public abstract Vehiculo consultarTodo();
+    public abstract void consultarTodo();
 }
