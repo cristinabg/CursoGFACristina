@@ -11,10 +11,10 @@ package pkg15ejemplohilos;
  */
 public class Autobus {
     private int numerAutobus;
-    private String origen;
-    private String destino;
+    private String origen,destino;
     private int[] tiempos;
-
+            
+            
     public Autobus(int numerAutobus, String origen, String destino, int[] tiempos) {
         this.numerAutobus = numerAutobus;
         this.origen = origen;
