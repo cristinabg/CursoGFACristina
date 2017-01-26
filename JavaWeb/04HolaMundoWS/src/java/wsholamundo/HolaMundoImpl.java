@@ -6,6 +6,7 @@
 package wsholamundo;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import javax.jws.WebParam;
 /**
  *
  * @author ac.barrios
@@ -14,7 +15,7 @@ import javax.jws.WebService;
 public class HolaMundoImpl implements HolaMundo{
     
     @WebMethod
-    public String getHolaMundo(String s){
+    public String getHolaMundo(@WebParam(name="nombre") String s){
         return "Hola "+ s;
     }
 

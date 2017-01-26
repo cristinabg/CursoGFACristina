@@ -1,4 +1,4 @@
-package vehiculo;
+package modelos;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -27,8 +27,8 @@ public class Moto extends Vehiculo {
         return tipo;
     }
 
-    public void setIdMoto() {
-        this.idMoto = "m001"+id;
+    public void setIdMoto(String idMoto) {
+        this.idMoto = "m001"+idMoto;
     }
     
     public void setAnio(int anio) {
@@ -46,39 +46,15 @@ public class Moto extends Vehiculo {
     }
     
     public Moto(){}
-    
-     @Override
-    public void Registrar(){
-         Scanner lectorString = new Scanner(System.in);
-         Scanner lectorDouble = new Scanner(System.in);
-         Scanner lectorInt = new Scanner(System.in);
-         Moto m = new Moto();
-         
-         System.out.println("Ingresa marca: ");
-         m.setMarca(lectorString.nextLine());
-         System.out.println("Ingresa modelo: ");
-         m.setModelo(lectorString.nextLine());
-         System.out.println("Ingresa costo:");
-         m.setCosto(lectorDouble.nextDouble());
-         System.out.println("Ingresa año:");
-         m.setAnio(lectorInt.nextInt());
-         System.out.println("Ingresa tipo: ");
-         m.setTipo(lectorString.nextLine());
-        
-         moto.add(new Moto(m.getIdMoto(),m.getMarca(),m.getModelo(),m.getCosto(),m.getAnio(),m.getTipo()));
-       }
-    
+
     @Override
-    public void consultarTodo(){
-        System.out.println("================MOTOS=================");
-        for(int valor = 0; valor < moto.size(); valor++) {
-            System.out.println(
-                    "Marca: " + moto.get(valor).getMarca() + " "
-                    + "Modelo: " + moto.get(valor).getModelo() + " "
-                    + "Costo: " + moto.get(valor).getCosto() + " "
-                    + "Año: " + moto.get(valor).anio + " "
-                    + "Tipo: " + moto.get(valor).tipo);
-        }
-        System.out.println("=======================================");
+    public void Registrar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void consultarTodo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

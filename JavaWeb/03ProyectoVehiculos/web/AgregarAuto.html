@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="estilos/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div><h1>Registro de Auto</h1></div>
+            <div class="row">
+                <div class="col-md-6 center-block">
+                    <form method="post" action="insertarAuto">
+                        <label>idAuto</label>
+                        <input class="form-control" id="idAuto" name="idAuto" type="text"/>
+                        <label>Marca</label>
+                        <input class="form-control" id="marca" name="marca" type="text"/>
+                        <label>Modelo</label>
+                        <input class="form-control" id="modelo" name="modelo" type="text">
+                        <label>Costo</label>
+                        <input  class="form-control" id="costo" name="costo" type="number"/>
+                        <label>Kilometros</label>
+                        <input  class="form-control" id="km" name="km" type="number"/>
+                        <label>Vuela</label>
+                        <select name="vuela" id="vuela">
+                            <option value="">Selecciona una opción</option>
+                            <option value="true">Si</option>
+                            <option value="false">No</option>
+                        </select>
+                        <button type="submit" name="formulario" value="auto">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

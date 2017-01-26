@@ -1,5 +1,5 @@
 
-package vehiculo;
+package modelos;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,7 +11,7 @@ public class Auto extends Vehiculo {
     
     private String idAuto;
     private Double kilometros;
-    private boolean vuela;
+    private Boolean vuela;
     private static int id;
     
     private static ArrayList<Auto> autos = new ArrayList();
@@ -19,15 +19,15 @@ public class Auto extends Vehiculo {
         return kilometros;
     }
 
-    public void setIdAuto() {
-        this.idAuto = "a00"+id;
+    public void setIdAuto(String idAuto) {
+        this.idAuto = "a00"+idAuto;
     }
 
     public void setKilometros(Double kilometros) {
         this.kilometros = kilometros;
     }
 
-    public void setVuela(boolean vuela) {
+    public void setVuela(Boolean vuela) {
         this.vuela = vuela;
     }
 
@@ -35,7 +35,7 @@ public class Auto extends Vehiculo {
         return idAuto;
     }
 
-    public boolean isVuela() {
+    public Boolean isVuela() {
         return vuela;
     }
     
@@ -47,46 +47,16 @@ public class Auto extends Vehiculo {
     }
     public Auto(){
     }
-    
+
     @Override
-    public void Registrar(){
-         Scanner lectorString = new Scanner(System.in);
-         Scanner lectorDouble = new Scanner(System.in);
-         Scanner lectorBoolean = new Scanner(System.in);
-         Auto a = new Auto();
-         
-         System.out.println("Ingresa marca: ");
-         a.setMarca(lectorString.nextLine());
-         
-         System.out.println("Ingresa modelo: ");
-         a.setModelo(lectorString.nextLine());
-         
-         System.out.println("Ingresa costo:");
-         a.setCosto(lectorDouble.nextDouble());
-         
-         System.out.println("Ingresa kilometros");
-         a.setKilometros(lectorDouble.nextDouble());
-     
-         System.out.println("Ingresa true sí vuela, de lo contrario false: ");
-         a.setVuela(lectorBoolean.hasNext());
-           
-        autos.add(new Auto(a.getIdAuto(),a.getMarca(), a.getModelo(), a.getCosto(), a.getKilometros(), a.isVuela()));
-         
-       }
-    
+    public void Registrar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
-    public void consultarTodo(){
-        System.out.println("===============AUTOS===================");
-          for(int valor = 0; valor<autos.size(); valor++){
-             System.out.println(
-                     "idAuto:"+ autos.get(valor).getIdAuto()+" "+
-                     "Marca: "+ autos.get(valor).getMarca()+" "+
-                     "Modelo: " + autos.get(valor).getModelo()+" "+
-                     "Costo: " + autos.get(valor).getCosto() +" "+
-                     "Kilometros: "+ autos.get(valor).kilometros+" "+
-                     "Vuela: "+ autos.get(valor).vuela);
-         }
-        System.out.println("=======================================");
+    public void consultarTodo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+   
 }
