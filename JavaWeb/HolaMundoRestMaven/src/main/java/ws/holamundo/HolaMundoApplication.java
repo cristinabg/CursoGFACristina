@@ -21,6 +21,8 @@ public class HolaMundoApplication extends Application {
 
     public HolaMundoApplication() {
         singletons.add(new HolaMundoWS());
+        singletons.add(new mensajeWS());
+        singletons.add(new archivoWS());
     }
     
     @Override
