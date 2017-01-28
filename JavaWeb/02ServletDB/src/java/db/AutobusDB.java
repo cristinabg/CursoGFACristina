@@ -23,7 +23,7 @@ public class AutobusDB {
     private static final String jdbcDriver = "com.mysql.jdbc.Driver";
     private static final String dbUrl = "jdbc:mysql://localhost:3306/gfajava";
     private static final String user = "root";
-    private static final String pass = "admin";
+    private static final String pass = "12345";
 
     public List<Autobus> getAutobuses() throws ClassNotFoundException, SQLException {
         Class.forName(jdbcDriver);

@@ -31,9 +31,9 @@ public class CorridaBD {
         Statement consulta = conexion.createStatement();
         String inserta = String.format("INSERT INTO corrida(origen, destino, fechaSalida, horaSalida, fechaLlegada, HoraLlegada, escalas) "
                 + "VALUES ('%s','%s','%s','%s','%s','%s',%d)",
-                corrida.getOrigen(), corrida.getDestino(), corrida.getFechaSalida().toString(),
-                corrida.getHoraSalida().toString(), corrida.getFechaLlegada().toString(), 
-                corrida.getHoraLlegada().toString(), corrida.getEscalas());
+                corrida.getOrigen(), corrida.getDestino(), corrida.getFechaSalida(),
+                corrida.getHoraSalida(), corrida.getFechaLlegada(), 
+                corrida.getHoraLlegada(), corrida.getEscalas());
         int respuesta = consulta.executeUpdate(inserta);
         
         consulta.close();
@@ -41,5 +41,20 @@ public class CorridaBD {
 
         return respuesta == 1 ? true:false;
     }
+    
+    public static Boolean eliminar(int id) throws ClassNotFoundException, SQLException {
+        Class.forName(jdbcDriver);
+        
+        Connection conexion = DriverManager.getConnection(dbUrl, user, pass);
+        Statement consulta = conexion.createStatement();
+        String inserta = String.format("DELETE FROM corrida "
+                + "WHERE idCorrida = %d",
+                id);
+        int respuesta = consulta.executeUpdate(inserta);
+        
+        consulta.close();
+        conexion.close();
 
+        return respuesta == 1 ? true:false;
+    }
 }

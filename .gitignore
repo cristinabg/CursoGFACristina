@@ -33,6 +33,7 @@ hs_err_pid*
 /JavaWeb/04HolaMundoWS/nbproject/private/
 /JavaWeb/04HolaMundoWS/build/
 /JavaWeb/04HolaMundoWS/dist/
+<<<<<<< HEAD
 /JavaWeb/05EstadosMexico/nbproject/private/
 /JavaWeb/05EstadosMexico/build/
 /JavaWeb/05EstadosMexico/dist/
@@ -45,3 +46,11 @@ hs_err_pid*
 /JavaWeb/08ServiciosRest/build/
 /JavaWeb/09ServicioREST_Corridas/nbproject/private/
 /JavaWeb/09ServicioREST_Corridas/build/
+=======
+/JavaWeb/02ServletDB/dist/
+>>>>>>> 2a04e41aa22ea73394c77d467cf7686d63d4e073
+/JavaWeb/HolaMundoRest/target/
+/JavaWeb/09ServicioRESTCorridas/build/
+/JavaWeb/07ServicioSOAP_Corridas/build/
+/JavaWeb/07ServicioSOAP_Corridas/dist/
+/JavaWeb/HolaMundoRestMaven/target/

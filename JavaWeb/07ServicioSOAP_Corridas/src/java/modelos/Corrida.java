@@ -14,14 +14,14 @@ import java.sql.Time;
  */
 public class Corrida {
 
-    public int idCorrida;
-    public String origen;
-    public String destino;
-    public Date fechaSalida;
-    public Time horaSalida;
-    public Date fechaLlegada;
-    public Time horaLlegada;
-    public int escalas;
+    private int idCorrida;
+    private String origen;
+    private String destino;
+    private String fechaSalida;
+    private String horaSalida;
+    private String fechaLlegada;
+    private String horaLlegada;
+    private int escalas;
 
     public int getIdCorrida() {
         return idCorrida;
@@ -35,19 +35,19 @@ public class Corrida {
         return destino;
     }
 
-    public Date getFechaSalida() {
+    public String getFechaSalida() {
         return fechaSalida;
     }
 
-    public Time getHoraSalida() {
+    public String getHoraSalida() {
         return horaSalida;
     }
 
-    public Date getFechaLlegada() {
+    public String getFechaLlegada() {
         return fechaLlegada;
     }
 
-    public Time getHoraLlegada() {
+    public String getHoraLlegada() {
         return horaLlegada;
     }
 
@@ -67,19 +67,19 @@ public class Corrida {
         this.destino = destino;
     }
 
-    public void setFechaSalida(Date fechaSalida) {
+    public void setFechaSalida(String fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
 
-    public void setHoraSalida(Time horaSalida) {
+    public void setHoraSalida(String horaSalida) {
         this.horaSalida = horaSalida;
     }
 
-    public void setFechaLlegada(Date fechaLlegada) {
+    public void setFechaLlegada(String fechaLlegada) {
         this.fechaLlegada = fechaLlegada;
     }
 
-    public void setHoraLlegada(Time horaLlegada) {
+    public void setHoraLlegada(String horaLlegada) {
         this.horaLlegada = horaLlegada;
     }
 
@@ -87,8 +87,8 @@ public class Corrida {
         this.escalas = escalas;
     }
 
-    public Corrida(int idCorrida, String origen, String destino, Date fechaSalida, Time horaSalida, Date fechaLlegada, Time horaLlegada, int escalas) {
-        this.idCorrida = idCorrida;
+    public Corrida(String origen, String destino, String fechaSalida, String horaSalida, String fechaLlegada, String horaLlegada, int escalas) {
+      //  this.idCorrida = idCorrida;
         this.origen = origen;
         this.destino = destino;
         this.fechaSalida = fechaSalida;
@@ -97,6 +97,8 @@ public class Corrida {
         this.horaLlegada = horaLlegada;
         this.escalas = escalas;
     }
+
+    
 
     public Corrida() {
     }
