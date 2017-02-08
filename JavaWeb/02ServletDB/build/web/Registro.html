@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Registra un Autobus</div>
+        <form method="post" action="/autobuses">
+            <label for="num_autobus">Número de Autobús:</label>
+            <input id="num_autobus" name="num_autobus" type="number">
+            <br>
+            <label for="siglas">Siglas:</label>
+            <input id="siglas" name="siglas" type="text" maxlength="3">
+            <br>
+            <label for="modelo">Modelo</label>
+            <input id="modelo" name="modelo" type="number" min="1990" max="2017">
+            <br>
+            <label for="capacidad">Capacidad:</label>
+            <input id="capacidad" name="capacidad" type="number" min="10" max="40">
+            <br>
+            <label for="base">Base:</label>
+            <select name="base" id="base">
+                <option value="León">León</option>
+                <option value="Guadalajara">Guadalajara</option>
+                <option value="Silao">Silao</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Celaya">Celaya</option>
+            </select>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>

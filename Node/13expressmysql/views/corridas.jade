@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+    h1 Lista de Corridas
+    ul#lista
+        each corrida,i in corridas
+            li 
+                p ID: #{corrida.idCorrida}
+                p Origen:#{corrida.origen}
+                p Destino: #{corrida.destino}
+                p Hora Salida: #{corrida.horaSalida}
+            hr
+    script.
+        var h=0;
+        alert("Hola"+ (h+20));

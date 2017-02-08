@@ -1,0 +1,3 @@
+Los sectores que más gravemente se han visto afectados por esta delincuencia digital son los retail y de las finanzas a los que desgraciadamente ya les es habitual convivir con términos como  phising, pharming, vishing o hacking.
+
+Hasta este momento, evitar el fraude en las transacciones electrónicas ha estado en manos de las entidades financieras y los procesadores. Sin embargo, los protocolos aplicados en la actualidad al parecer se han quedado cortos a la hora de garantizar la seguridad en una compra o venta por Internet.
